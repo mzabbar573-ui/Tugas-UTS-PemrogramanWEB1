@@ -220,3 +220,5 @@ Data yang disimpan antara lain:
 
 Data katalog dan data tracking awal disimpan pada file `data.js`.
 ---
+
+# Link YouTube : https://youtu.be/lA9Q7nIiLJM
