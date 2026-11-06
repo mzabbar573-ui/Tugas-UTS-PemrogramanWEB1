@@ -220,5 +220,3 @@ Data yang disimpan antara lain:
 
 Data katalog dan data tracking awal disimpan pada file `data.js`.
 ---
-
-**Dibuat untuk memenuhi tugas Ujian Tengah Semester (UTS) Pemrograman Web 1.**
