@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Buku</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h2>📚 Katalog Buku</h2>
+      <a href="dashboard.html" class="btn-back">Kembali</a>
+    </header>
+
+    <main class="container">
+      <section class="content-card">
+        <h1>Informasi Stok Buku</h1>
+        <p>Daftar katalog buku yang tersedia di toko.</p>
+
+        <button class="btn-primary" onclick="bukaModal('modalTambah')">
+          + Tambah Stok Buku
+        </button>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Cover</th>
+                <th>Kode Barang</th>
+                <th>Nama Buku</th>
+                <th>Jenis</th>
+                <th>Edisi</th>
+                <th>Stok</th>
+                <th>Harga</th>
+              </tr>
+            </thead>
+            <tbody id="tabelStok"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal Tambah Stok -->
+    <div class="modal" id="modalTambah">
+      <div class="modal-content">
+        <button class="close-modal" onclick="tutupModal('modalTambah')">
+          &times;
+        </button>
+        <h2>Tambah Buku Baru</h2>
+
+        <form id="formTambahBuku">
+          <input
+            type="text"
+            id="kodeBarang"
+            placeholder="Kode Barang"
+            required
+          />
+
+          <input type="text" id="namaBarang" placeholder="Nama Buku" required />
+
+          <input
+            type="text"
+            id="jenisBarang"
+            placeholder="Jenis Buku"
+            required
+          />
+
+          <input
+            type="number"
+            id="edisi"
+            placeholder="Edisi"
+            min="1"
+            required
+          />
+
+          <input
+            type="number"
+            id="stok"
+            placeholder="Jumlah Stok"
+            min="0"
+            required
+          />
+
+          <input
+            type="number"
+            id="harga"
+            placeholder="Harga Buku"
+            min="1"
+            required
+          />
+
+          <button type="submit" class="btn-primary">Simpan Buku</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemesanan Buku</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h2>🛒 Pemesanan Buku</h2>
+      <a href="dashboard.html" class="btn-back">Kembali</a>
+    </header>
+
+    <main class="container">
+      <section class="content-card">
+        <h1>Form Pemesanan Buku</h1>
+
+        <form id="formCheckout">
+          <h3>Informasi Pemesan</h3>
+
+          <label>Nama Pemesan</label>
+          <input
+            type="text"
+            id="namaPemesan"
+            placeholder="Nama lengkap"
+            required
+          />
+
+          <label>Email</label>
+          <input type="email" id="emailPemesan" placeholder="Email" required />
+
+          <label>Nomor Telepon</label>
+          <input
+            type="tel"
+            id="teleponPemesan"
+            placeholder="Nomor telepon"
+            required
+          />
+
+          <label>Alamat Pengiriman</label>
+          <textarea
+            id="alamatPemesan"
+            placeholder="Alamat lengkap"
+            required
+          ></textarea>
+
+          <h3>Detail Pesanan</h3>
+
+          <label>Pilih Buku</label>
+          <select id="pilihBuku" required>
+            <option value="">-- Pilih Buku --</option>
+          </select>
+
+          <label>Jumlah Buku</label>
+          <input type="number" id="jumlahBuku" min="1" value="1" required />
+
+          <button type="button" class="btn-secondary" onclick="tambahPesanan()">
+            Tambah ke Keranjang
+          </button>
+
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama Buku</th>
+                  <th>Harga</th>
+                  <th>Jumlah</th>
+                  <th>Subtotal</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="tabelKeranjang"></tbody>
+            </table>
+          </div>
+
+          <h3 id="totalHarga">Total: Rp 0</h3>
+
+          <h3>Informasi Pembayaran</h3>
+
+          <label>Metode Pembayaran</label>
+          <select id="metodePembayaran" required>
+            <option value="">-- Pilih Pembayaran --</option>
+            <option value="Transfer Bank">Transfer Bank</option>
+            <option value="COD">Cash On Delivery (COD)</option>
+            <option value="E-Wallet">E-Wallet</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Buat Pesanan</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

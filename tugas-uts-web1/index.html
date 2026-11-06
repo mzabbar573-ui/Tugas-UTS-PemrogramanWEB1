@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .login-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <div class="login-card">
+        <div class="brand-icon">📚</div>
+        <h1>Toko Buku Online</h1>
+        <p class="subtitle">Silakan login untuk melanjutkan</p>
+
+        <form id="formLogin">
+          <label>Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Masukkan email"
+            required
+          />
+
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Masukkan password"
+            required
+          />
+
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+
+        <div class="login-links">
+          <button onclick="bukaModal('modalLupa')">Lupa Password?</button>
+          <span>|</span>
+          <button onclick="bukaModal('modalDaftar')">Daftar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Lupa Password -->
+    <div class="modal" id="modalLupa">
+      <div class="modal-content">
+        <button class="close-modal" onclick="tutupModal('modalLupa')">
+          &times;
+        </button>
+        <h2>Lupa Password</h2>
+        <p>Masukkan email yang terdaftar.</p>
+
+        <form id="formLupa">
+          <input
+            type="email"
+            id="emailLupa"
+            placeholder="Email Anda"
+            required
+          />
+          <button type="submit" class="btn-primary">Kirim</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Daftar -->
+    <div class="modal" id="modalDaftar">
+      <div class="modal-content">
+        <button class="close-modal" onclick="tutupModal('modalDaftar')">
+          &times;
+        </button>
+        <h2>Daftar Akun</h2>
+
+        <form id="formDaftar">
+          <input
+            type="text"
+            id="namaDaftar"
+            placeholder="Nama lengkap"
+            required
+          />
+          <input type="email" id="emailDaftar" placeholder="Email" required />
+          <input
+            type="password"
+            id="passwordDaftar"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="btn-primary">Daftar Sekarang</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

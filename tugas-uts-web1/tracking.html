@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracking Pengiriman</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h2>🚚 Tracking Pengiriman</h2>
+      <a href="dashboard.html" class="btn-back">Kembali</a>
+    </header>
+
+    <main class="container">
+      <section class="content-card">
+        <h1>Cek Status Pengiriman</h1>
+        <p>Masukkan nomor Delivery Order untuk melihat informasi pengiriman.</p>
+
+        <form id="formTracking">
+          <input
+            type="text"
+            id="nomorDO"
+            placeholder="Contoh: 20230012"
+            required
+          />
+          <button type="submit" class="btn-primary">Cari</button>
+        </form>
+
+        <div id="hasilTracking" style="margin-top: 25px"></div>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h2>📚 Toko Buku Online</h2>
+      <div>
+        <span id="namaUser"></span>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="welcome-card">
+        <h1 id="greeting">Selamat Datang!</h1>
+        <p>Selamat berbelanja dan mengelola pemesanan buku.</p>
+      </section>
+
+      <h2 class="section-title">Menu Utama</h2>
+
+      <section class="menu-grid">
+        <a href="stok.html" class="menu-card">
+          <div class="menu-icon">📚</div>
+          <h3>Informasi Stok/Katalog</h3>
+          <p>Lihat dan kelola stok buku.</p>
+        </a>
+
+        <a href="tracking.html" class="menu-card">
+          <div class="menu-icon">🚚</div>
+          <h3>Tracking Pengiriman</h3>
+          <p>Periksa status pengiriman buku.</p>
+        </a>
+
+        <a href="checkout.html" class="menu-card">
+          <div class="menu-icon">🛒</div>
+          <h3>Pemesanan Buku</h3>
+          <p>Pesan buku secara online.</p>
+        </a>
+      </section>
+
+      <section id="laporan" class="content-card">
+        <h2>📊 Laporan Pemesanan</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3 id="jumlahTransaksi">0</h3>
+            <p>Total Transaksi</p>
+          </div>
+          <div class="stat-card">
+            <h3 id="totalPendapatan">Rp 0</h3>
+            <p>Total Pemesanan</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="transaksi" class="content-card">
+        <h2>🧾 History Transaksi</h2>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>No. DO</th>
+                <th>Nama Pemesan</th>
+                <th>Buku</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="tabelHistory">
+              <tr>
+                <td colspan="4">Belum ada transaksi.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
